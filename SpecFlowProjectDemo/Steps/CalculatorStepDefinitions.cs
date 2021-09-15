@@ -40,16 +40,15 @@ namespace DesktopUIautomationCsharp.Steps
             }
         }
 
-
-        [BeforeScenario]
-        public void StartScenario()
+        [Given(@"Launch calc")]
+        public void GivenLaunchCalc()
         {
             FinalizeTest();
             Thread.Sleep(2000);
             InitializeTest();
             Thread.Sleep(2000);
         }
-        
+
         [Then(@"close calc")]
         public void ThenCloseCalc()
         {
@@ -57,7 +56,7 @@ namespace DesktopUIautomationCsharp.Steps
             FinalizeTest();
         }
 
-        [Given(@"I navigate to programmer mode")]
+[Given(@"I navigate to programmer mode")]
         public void GivenINavigateToProgrammerMode()
         {
             Engine engine = new Engine();

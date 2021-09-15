@@ -6,7 +6,8 @@ Test objectives:
 
     @mytag
 Scenario: Automate programmer mode
-	Given I navigate to programmer mode
+Given Launch calc
+	And I navigate to programmer mode
 	When I enter a value
 	Then I verify HEX value is correct
 	And I verify DEC value is correct
@@ -17,7 +18,8 @@ Scenario: Automate programmer mode
 
 	@mytag
 Scenario: Automate scientific mode
-	Given I navigate to scientific mode
+Given Launch calc
+	And I navigate to scientific mode
 	When perform some calculations
 	Then verify the results
 	And close calc
@@ -25,7 +27,8 @@ Scenario: Automate scientific mode
 
 	@mytag
 Scenario: Automate date calculation mode
-	Given I navigate to date calculation mode
+Given Launch calc
+	And I navigate to date calculation mode
 	When enter dates
 	Then verify day results
 	And verify week results 
@@ -34,7 +37,8 @@ Scenario: Automate date calculation mode
 
 	@mytag
 Scenario: Automate standard mode
-	Given I navigate to standard mode
+Given Launch calc
+	And I navigate to standard mode
 	When perform some calculations for standard
 	Then verify the results for standard
 	And cancel
